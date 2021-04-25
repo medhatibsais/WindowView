@@ -1,6 +1,6 @@
 # WindowView
 
-**WindowView is used to embed window style view to your project.
+**WindowView** is used to embed window style view to your project.
 
 ## Requirements
 1. iOS 10.0+
@@ -64,7 +64,7 @@ self.windowView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constan
 ```
 
 4. Add animations settings to the window view
-**Note you can skip this section and use the default setup
+**Note** you can skip this section and use the default setup
 
 ```swift
 
@@ -76,7 +76,7 @@ let rotateIconToOriginAnimationSettings = AnimationSettings(duration: 1.5, delay
 let windowAnimation = WindowAnimation(iconImagePinnedObject: .topImage, iconRotationAngle: 190, rotateIconAnimationSettings: rotateIconAnimationSettings, rotateIconToOriginAnimationSettings: rotateIconToOriginAnimationSettings, openWindowAnimationSettings: openWindowAnimationSettings, closeWindowAnimationSettings: closeWindowAnimationSettings)
 ```
 5. Change the icon image constraints option
-**Note you can skip this section and use the default setup
+**Note** you can skip this section and use the default setup
 
 ```swift 
 let iconImageConstraint = IconImageConstraint(centerXConstraintConstant: 0, centerYConstraintConstant: 0, height: 128, width: 128)
@@ -92,7 +92,7 @@ self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "
 ```
 
 ### Setup with login view
-**In addition to the above customization you can add custom login view
+In addition to the above customization you can add custom login view
 
 1. Initialize login view or any view that is compatible with your project
 ```swift 
@@ -115,7 +115,7 @@ loginView.heightAnchor.constraint(equalToConstant: 300).isActive = true
 
 
 ### WindowViewDelegate
-**WindowViewDelegate contains methods that help you to know WindowView status
+**WindowViewDelegate** contains methods that help you to know WindowView status
 
 methods in delegate:
 
@@ -128,6 +128,12 @@ func windowViewWillClose()
 
 func windowViewDidClose()
 ```
+
+## Videos
+[Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
+[Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
+[Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
+[Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
 
 ## Authors
 
