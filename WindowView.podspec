@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
     "https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif",
     "https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif"
 
-  spec.license      = { :type => "MIT", :file => "https://github.com/medhatibsais/WindowView/blob/main/LICENSE" }
+  spec.license      = { :type => "MIT", :file => "https://github.com/medhatibsais/WindowView/blob/master/LICENSE" }
 
   spec.author             = { "Medhat Ibsais" => "madhatibsais1@gmail.com" }
   spec.social_media_url   = "https://www.linkedin.com/in/madhat-ibsais/"

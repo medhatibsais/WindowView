@@ -140,4 +140,4 @@ func windowViewDidClose()
 Medhat Ibsais
 
 ## License
-[LICENSE](https://github.com/medhatibsais/WindowView/blob/main/LICENSE)
+[LICENSE](https://github.com/medhatibsais/WindowView/blob/master/LICENSE)
