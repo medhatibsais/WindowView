@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WindowView"
-  spec.version      = "1.0"
+  spec.version      = "1.0.1"
   spec.summary      = "WindowView is a dependency to implement window sliding view to open your app with some interacting, exciting, and wonderful animations"
 
   spec.description  = <<-DESC
