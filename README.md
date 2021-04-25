@@ -3,10 +3,10 @@
 **WindowView** is used to embed window style view to your project.
 
 ## Videos
-![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
-![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
-![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
-![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
+![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
+![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
+![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
+![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
 
 ## Requirements
 1. iOS 10.0+
