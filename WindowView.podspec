@@ -10,14 +10,14 @@ Pod::Spec.new do |spec|
                    DESC
 
   spec.homepage     = "https://github.com/medhatibsais/WindowView"
-  spec.screenshots  = "https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif", "https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif",
-    "https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif",
-    "https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif"
+  #spec.screenshots  = "https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif", "https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif",
+    #"https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif",
+    #"https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif"
 
   spec.license      = { :type => "MIT", :file => "https://github.com/medhatibsais/WindowView/blob/master/LICENSE" }
 
   spec.author             = { "Medhat Ibsais" => "madhatibsais1@gmail.com" }
-  spec.social_media_url   = "https://www.linkedin.com/in/madhat-ibsais/"
+  spec.social_media_url   = "https://www.linkedin.com/in/madhat-ibsais"
 
   spec.ios.deployment_target = "10.0"
   spec.swift_version = "4.2"
