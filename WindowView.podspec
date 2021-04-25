@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
     #"https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif"
 
   spec.license      = { :type => "MIT", :file => "https://github.com/medhatibsais/WindowView/blob/master/LICENSE" }
-
+  spec.resources 				= "WindowView/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   spec.author             = { "Medhat Ibsais" => "madhatibsais1@gmail.com" }
   spec.social_media_url   = "https://www.linkedin.com/in/madhat-ibsais"
 
@@ -24,6 +24,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/medhatibsais/WindowView", :tag => "#{spec.version}" }
 
-  spec.source_files  = "WindowView/**/*.{h,m, swift}"
+  spec.source_files  = "WindowView/**/*.{swift}"
   
 end
