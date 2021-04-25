@@ -64,7 +64,7 @@ self.windowView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constan
 ```
 
 4. Add animations settings to the window view
-**Note** you can skip this section and use the default setup
+**Note:** you can skip this section and use the default setup
 
 ```swift
 
@@ -76,7 +76,7 @@ let rotateIconToOriginAnimationSettings = AnimationSettings(duration: 1.5, delay
 let windowAnimation = WindowAnimation(iconImagePinnedObject: .topImage, iconRotationAngle: 190, rotateIconAnimationSettings: rotateIconAnimationSettings, rotateIconToOriginAnimationSettings: rotateIconToOriginAnimationSettings, openWindowAnimationSettings: openWindowAnimationSettings, closeWindowAnimationSettings: closeWindowAnimationSettings)
 ```
 5. Change the icon image constraints option
-**Note** you can skip this section and use the default setup
+**Note:** you can skip this section and use the default setup
 
 ```swift 
 let iconImageConstraint = IconImageConstraint(centerXConstraintConstant: 0, centerYConstraintConstant: 0, height: 128, width: 128)
@@ -113,6 +113,26 @@ loginView.rightAnchor.constraint(equalTo: self.windowView.firstImageView.rightAn
 loginView.heightAnchor.constraint(equalToConstant: 300).isActive = true
 ```
 
+## Open and close **WindowView**
+
+1. Open
+```swift 
+self.windowView.open()
+```
+2. Close
+```swift 
+self.windowView.close()
+```
+
+**Note:** to run animation immediately once the view loaded you can call open method as show below.
+```swift 
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    self.windowView.open()
+    
+}
+```
 
 ### WindowViewDelegate
 **WindowViewDelegate** contains methods that help you to know WindowView status
