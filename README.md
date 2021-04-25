@@ -2,6 +2,12 @@
 
 **WindowView** is used to embed window style view to your project.
 
+## Videos
+![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
+![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
+![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
+![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
+
 ## Requirements
 1. iOS 10.0+
 2. Xcode 9.3+
@@ -148,12 +154,6 @@ func windowViewWillClose()
 
 func windowViewDidClose()
 ```
-
-## Videos
-![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
-![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
-![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
-![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
 
 ## Authors
 
