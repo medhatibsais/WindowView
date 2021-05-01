@@ -48,8 +48,8 @@ public class WindowView: UIView {
     /// Icon Image View Width Constraint
     @IBOutlet weak private var iconImageViewWidthConstraint: NSLayoutConstraint!
     
-    /// Window Animation
-    private var windowAnimation: WindowAnimation = WindowAnimation(iconImagePinnedObject: .topImage)
+    /// Animation
+    private var animation: Animations = .unlock(iconImagePinnedObject: .topImage, iconRotationAngle: 190)
     
     /// Components Constraints
     private var componentsConstraints = ComponentsConstraints()
@@ -103,7 +103,7 @@ public class WindowView: UIView {
     public func setup(with representable: WindowViewRepresentable) {
         
         // Set window animation
-        self.windowAnimation = representable.windowAnimation
+        self.animation = representable.animation
         
         // Set components constraints
         self.componentsConstraints = representable.componentsConstraints
@@ -114,7 +114,7 @@ public class WindowView: UIView {
         self.iconImageView.image = representable.iconImage
         
         // Remove icon image if the option is no icon
-        if self.windowAnimation.iconImagePinnedObject == .noIcon {
+        if self.animation.windowAnimation.iconImagePinnedObject == .noIcon {
             self.iconImageView.removeFromSuperview()
         }
         else {
@@ -132,11 +132,17 @@ public class WindowView: UIView {
      */
     public func open() {
         
+        // End view editing
+        self.endEditing(true)
+        
+        // Layout if needed
+        self.layoutIfNeeded()
+        
         // Call will open
         self.delegate?.windowViewWillOpen()
         
         // Check if the view has icon animation option
-        if self.windowAnimation.iconRotationAngle != 0, let rotateIconAnimationSettings = self.windowAnimation.rotateIconAnimationSettings, self.iconImageView != nil {
+        if self.animation.windowAnimation.iconRotationAngle != 0, let rotateIconAnimationSettings = self.animation.windowAnimation.rotateIconAnimationSettings, self.iconImageView != nil {
          
             // Set transform to identity
             self.iconImageView.layer.transform = CATransform3DIdentity
@@ -145,13 +151,13 @@ public class WindowView: UIView {
             UIView.animate(withDuration: rotateIconAnimationSettings.duration, delay: rotateIconAnimationSettings.delay, options: .curveEaseOut, animations: {
                 
                 // Set transform to icon rotation value around z axis
-                self.iconImageView.layer.transform = CATransform3DMakeRotation(self.windowAnimation.iconRotationAngle, 0, 0, 1)
+                self.iconImageView.layer.transform = CATransform3DMakeRotation(self.animation.windowAnimation.iconRotationAngle, 0, 0, 1)
                 
             }, completion: { _ in })
         }
         
         // Check icon image pinned object
-        switch self.windowAnimation.iconImagePinnedObject {
+        switch self.animation.windowAnimation.iconImagePinnedObject {
         
         // Top image
         case .topImage:
@@ -192,7 +198,7 @@ public class WindowView: UIView {
         }
         
         // Animate
-        UIView.animate(withDuration: self.windowAnimation.openWindowAnimationSettings.duration, delay: self.windowAnimation.openWindowAnimationSettings.delay, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: self.animation.windowAnimation.openWindowAnimationSettings.duration, delay: self.animation.windowAnimation.openWindowAnimationSettings.delay, options: .curveEaseOut, animations: {
             
             // Layout if needed
             self.layoutIfNeeded()
@@ -213,7 +219,7 @@ public class WindowView: UIView {
     /**
      Close
      */
-    public func close () {
+    public func close() {
         
         // Call will close delegate
         self.delegate?.windowViewWillClose()
@@ -231,10 +237,10 @@ public class WindowView: UIView {
         }
         
         // Has icon animation option
-        let hasIconAnimationOption: Bool = self.windowAnimation.iconRotationAngle != 0 && self.windowAnimation.rotateIconToOriginAnimationSettings != nil && self.iconImageView != nil
+        let hasIconAnimationOption: Bool = self.animation.windowAnimation.iconRotationAngle != 0 && self.animation.windowAnimation.rotateIconToOriginAnimationSettings != nil && self.iconImageView != nil
         
         // Animate close
-        UIView.animate(withDuration: self.windowAnimation.closeWindowAnimationSettings.duration, delay: self.windowAnimation.closeWindowAnimationSettings.delay, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: self.animation.windowAnimation.closeWindowAnimationSettings.duration, delay: self.animation.windowAnimation.closeWindowAnimationSettings.delay, options: .curveEaseOut, animations: {
             
             // Layout if needed
             self.layoutIfNeeded()
@@ -254,7 +260,7 @@ public class WindowView: UIView {
         if hasIconAnimationOption {
          
             // Rotate icon to origin animation settings
-            let rotateIconToOriginAnimationSettings = self.windowAnimation.rotateIconToOriginAnimationSettings!
+            let rotateIconToOriginAnimationSettings = self.animation.windowAnimation.rotateIconToOriginAnimationSettings!
             
             // Animate icon rotation
             UIView.animate(withDuration: rotateIconToOriginAnimationSettings.duration, delay: rotateIconToOriginAnimationSettings.delay, options: .curveEaseOut, animations: {

@@ -44,8 +44,7 @@ class ViewController: UIViewController {
         
         let componentsConstraints = ComponentsConstraints(iconConstraints: iconImageConstraint)
         
-        self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, windowAnimation: windowAnimation))
-        
+        self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, animation: Animations.roll(iconImagePinnedObject: .topImage)))
     }
 }
 

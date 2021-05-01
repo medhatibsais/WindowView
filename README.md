@@ -3,10 +3,10 @@
 **WindowView** is used to embed window style view to your project.
 
 ## Videos
-![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
-![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif)
-![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif)
-![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif)
+![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif =250x250)
+![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif =250x250)
+![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif =250x250)
+![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif =250x250)
 
 ## Requirements
 1. iOS 10.0+
@@ -69,8 +69,8 @@ self.windowView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant:
 self.windowView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
 ```
 
-4. Add animations settings to the window view
-**Note:** you can skip this section and use the default setup
+4. Add animations settings to the window view 
+- **Note:** you can skip this section and use the default setup
 
 ```swift
 
@@ -81,8 +81,8 @@ let rotateIconToOriginAnimationSettings = AnimationSettings(duration: 1.5, delay
 
 let windowAnimation = WindowAnimation(iconImagePinnedObject: .topImage, iconRotationAngle: 190, rotateIconAnimationSettings: rotateIconAnimationSettings, rotateIconToOriginAnimationSettings: rotateIconToOriginAnimationSettings, openWindowAnimationSettings: openWindowAnimationSettings, closeWindowAnimationSettings: closeWindowAnimationSettings)
 ```
-5. Change the icon image constraints option
-**Note:** you can skip this section and use the default setup
+5. Change the icon image constraints option 
+- **Note:** you can skip this section and use the default setup
 
 ```swift 
 let iconImageConstraint = IconImageConstraint(centerXConstraintConstant: 0, centerYConstraintConstant: 0, height: 128, width: 128)
@@ -91,10 +91,28 @@ let componentsConstraints = ComponentsConstraints(iconConstraints: iconImageCons
 ```
 
 6. Setup window view with parameters above
+- You can use the defined animations form the library or use your custom animations
 
+### Custom animation
 ```swift
 
-self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, windowAnimation: windowAnimation))
+self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, animation: Animations.custom(windowAnimation: windowAnimation)))
+```
+### Built in animations
+
+1. Roll
+
+```swift 
+
+self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, animation: Animations.roll(iconImagePinnedObject: .topImage)))
+
+```
+2. Unlock
+
+```swift 
+
+self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, animation: Animations.unlock(iconImagePinnedObject: .topImage, iconRotationAngle: 190)))
+
 ```
 
 ### Setup with login view
@@ -141,7 +159,7 @@ override func viewDidAppear(_ animated: Bool) {
 ```
 
 ### WindowViewDelegate
-**WindowViewDelegate** contains methods that help you to know WindowView status
+**WindowViewDelegate** contains methods that help you listening to WindowView status
 
 methods in delegate:
 

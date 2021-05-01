@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WindowView"
-  spec.version      = "1.0.1"
+  spec.version      = "1.2.0"
   spec.summary      = "WindowView is a dependency to implement window sliding view to open your app with some interacting, exciting, and wonderful animations"
 
   spec.description  = <<-DESC
@@ -15,15 +15,15 @@ Pod::Spec.new do |spec|
     #"https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif"
 
   spec.license      = { :type => "MIT", :file => "https://github.com/medhatibsais/WindowView/blob/master/LICENSE" }
-  spec.resources 				= "WindowView/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   spec.author             = { "Medhat Ibsais" => "madhatibsais1@gmail.com" }
   spec.social_media_url   = "https://www.linkedin.com/in/madhat-ibsais"
 
   spec.ios.deployment_target = "10.0"
   spec.swift_version = "4.2"
 
-  spec.source       = { :git => "https://github.com/medhatibsais/WindowView", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/medhatibsais/WindowView.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "WindowView/**/*.{swift}"
+  spec.resources 				= "WindowView/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   
 end

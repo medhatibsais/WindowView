@@ -15,6 +15,7 @@
 		2528B17426357EC500AA4953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2528B17226357EC500AA4953 /* LaunchScreen.storyboard */; };
 		2528B18526357FDE00AA4953 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528B18426357FDE00AA4953 /* LoginView.swift */; };
 		2528B18A26357FF900AA4953 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2528B18926357FF900AA4953 /* LoginView.xib */; };
+		25B6FC37263CB31200EB3BCA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B6FC36263CB31200EB3BCA /* Animations.swift */; };
 		25DB267D263125650021E466 /* WindowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 25DB267B263125650021E466 /* WindowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25DB26AC263127280021E466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB26AB263127280021E466 /* AppDelegate.swift */; };
 		25DB26AE263127280021E466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB26AD263127280021E466 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		2528B17526357EC500AA4953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2528B18426357FDE00AA4953 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2528B18926357FF900AA4953 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		25B6FC36263CB31200EB3BCA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		25DB2678263125650021E466 /* WindowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WindowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25DB267B263125650021E466 /* WindowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowView.h; sourceTree = "<group>"; };
 		25DB267C263125650021E466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				25DB26DB263325710021E466 /* AnimationSettings.swift */,
 				25DB26F02633307E0021E466 /* WindowAnimation.swift */,
+				25B6FC36263CB31200EB3BCA /* Animations.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				25DB26CA26312E1E0021E466 /* WindowViewRepresentable.swift in Sources */,
 				25DB270E26350FC60021E466 /* ComponentsConstraints.swift in Sources */,
 				25DB2708263450FC0021E466 /* IconImageConstraint.swift in Sources */,
+				25B6FC37263CB31200EB3BCA /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

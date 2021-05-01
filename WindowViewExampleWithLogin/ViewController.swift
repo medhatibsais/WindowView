@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 //        self.windowView.firstImageView.backgroundColor = .gray
 //        self.windowView.secondImageView.backgroundColor = .white
         
-        self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, windowAnimation: windowAnimation))
+        self.windowView.setup(with: WindowViewRepresentable(firstImage: UIImage(named: "backgroundImage")!, secondImage: UIImage(named: "backgroundImage")!, iconImage: UIImage(named: "JustChatLogo")!, componentsConstraints: componentsConstraints, animation: Animations.unlock(iconImagePinnedObject: .topImage, iconRotationAngle: 190)))
         
     }
 
