@@ -3,7 +3,7 @@
 **WindowView** is used to embed window style view to your project.
 
 ## Videos
-![Video1](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif =250x250)
+![Video1 250x250](https://github.com/medhatibsais/WindowView/blob/master/Videos/video3.gif)
 ![Video2](https://github.com/medhatibsais/WindowView/blob/master/Videos/video4.gif =250x250)
 ![Video3](https://github.com/medhatibsais/WindowView/blob/master/Videos/video1.gif =250x250)
 ![Video4](https://github.com/medhatibsais/WindowView/blob/master/Videos/video2.gif =250x250)
