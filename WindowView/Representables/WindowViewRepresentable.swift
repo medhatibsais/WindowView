@@ -19,8 +19,8 @@ public class WindowViewRepresentable {
     /// Icon Image
     private(set) var iconImage: UIImage?
     
-    /// Window Animation
-    private(set) var windowAnimation: WindowAnimation
+    /// Animation
+    private(set) var animation: Animations
     
     /// Components Constraints
     private(set) var componentsConstraints: ComponentsConstraints
@@ -29,7 +29,7 @@ public class WindowViewRepresentable {
      Initializer
      */
     public init() {
-        self.windowAnimation = WindowAnimation(iconImagePinnedObject: .topImage)
+        self.animation = .unlock(iconImagePinnedObject: .topImage, iconRotationAngle: 190)
         self.componentsConstraints = ComponentsConstraints()
     }
     
@@ -39,16 +39,16 @@ public class WindowViewRepresentable {
      - Parameter secondImage: Optional UIImage
      - Parameter iconImage: Optional UIImage
      - Parameter componentsConstraints: Components Constraints
-     - Parameter windowAnimation: Window Animation
+     - Parameter animation: Animations
      */
-    public convenience init(firstImage: UIImage?, secondImage: UIImage?, iconImage: UIImage?, componentsConstraints: ComponentsConstraints = ComponentsConstraints(), windowAnimation: WindowAnimation = WindowAnimation(iconImagePinnedObject: .topImage)) {
+    public convenience init(firstImage: UIImage?, secondImage: UIImage?, iconImage: UIImage?, componentsConstraints: ComponentsConstraints = ComponentsConstraints(), animation: Animations) {
         self.init()
         
         // Set values
         self.firstImage = firstImage
         self.secondImage = secondImage
         self.iconImage = iconImage
-        self.windowAnimation = windowAnimation
         self.componentsConstraints = componentsConstraints
+        self.animation = animation
     }
 }
